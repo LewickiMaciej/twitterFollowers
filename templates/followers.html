@@ -1,0 +1,8 @@
+{% if error %}
+	{{error}}
+{% endif %}
+<p>['screen_name', number of followers this person follow]</p>
+<a href="{% url 'secondLineFollowers:json' %}">Get JSON</a>
+{% for follower, number in secondLineFollowers.items %}
+	<p>	@{{follower}} --> {{number}}</p>
+{% endfor %}

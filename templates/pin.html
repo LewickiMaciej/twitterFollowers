@@ -1,0 +1,6 @@
+<form method='POST' action="{% url 'secondLineFollowers:followers' %}" >
+	{% csrf_token %}
+	<label for='pin'>Please, type in your pin:</label>
+	<input id='pin' type="text" name="pin">
+	<input type="submit" value='OK'>
+</form>
